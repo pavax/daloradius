@@ -32,7 +32,7 @@ services:
       - MYSQL_USER=radius
       - MYSQL_PASSWORD=radiusdbpw
       # Optional settings
-      - DEFAULT_CLIENT_SECRET=testing123
+      - DEFAULT_CLIENT_SECRET=${DEFAULT_CLIENT_SECRET}
     volumes:
       - freeradius-data:/data
     # If you want to disable debug output, remove the command parameter
@@ -55,7 +55,7 @@ services:
       - MYSQL_USER=radius
       - MYSQL_PASSWORD=radiusdbpw
       # Optional Settings:
-      - DEFAULT_CLIENT_SECRET=testing123
+      - DEFAULT_CLIENT_SECRET=${DEFAULT_CLIENT_SECRET}
       - DEFAULT_FREERADIUS_SERVER=radius
       - MAIL_SMTPADDR=127.0.0.1
       - MAIL_PORT=25
